@@ -1,3 +1,14 @@
+/*
+The btureforce solution for this porblem is to assign the cows one by one, we see which buildings will save us more time if we 
+assign another cow to them, and we do so.
+The problem is that K is very big.
+But there is a useful observation: let's consider that we assigned x cows to the ith building, let's call a[i]/x-a[i]/(x+1) 
+dif(i,x).
+at the optimal solution, dif(i,x) for all i such that 0<=i<n is fairly equal, so we can do a binary search on the value of
+the dif function.
+after that, to know how much cows we need to assign for each building, we can do some mathematical equations to get the sum of 
+cows, we compare it to k and iterate the binary search in accordance to it.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 const int N=1e5+5;
